@@ -4,6 +4,10 @@
 // I AM NOT DONE
 
 pub fn factorial(num: u64) -> u64 {
+    let fact = (1..num).reduce(|p, n| p * n);
+    println!("factorial: {}", fact);
+    fact
+
     // Complete this function to return the factorial of num
     // Do not use:
     // - return
