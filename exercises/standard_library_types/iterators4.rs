@@ -1,12 +1,12 @@
 // iterators4.rs
 // Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 pub fn factorial(num: u64) -> u64 {
-    let fact = (1..num).reduce(|p, n| p * n);
-    println!("factorial: {}", fact);
-    fact
+    if num == 0 {
+        1
+    } else {
+        (1..=num).reduce(|p, n| p * n).unwrap()
+    }
 
     // Complete this function to return the factorial of num
     // Do not use:
